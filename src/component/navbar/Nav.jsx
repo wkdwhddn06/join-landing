@@ -7,7 +7,7 @@ function Nav() {
         <NavContainer className="Nav">
             <NavItem name="JOIN" pressed={true}/>
             <NavItem name="CUSTOM" pressed={false}/>
-            <NavItem name="SUPPORT" pressed={true}/>
+            <NavItem name="SUPPORT" pressed={false}/>
             <NavItem name="BUSINESS" pressed={false}/>
         </NavContainer>
     )
