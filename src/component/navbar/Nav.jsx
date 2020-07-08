@@ -20,6 +20,10 @@ const NavContainer = styled.div`
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
+    @media only screen and (max-width: 800px)
+    {
+        justify-content: space-evenly;
+    }
 `
 
 export default Nav;
