@@ -1,11 +1,9 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import App from "./App";
+import emailjs from "emailjs-com";
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+emailjs.init("user_ikBfI3cvBCTv4zqVBoSsA");
+
+ReactDOM.render(<App />, document.getElementById("root"));
