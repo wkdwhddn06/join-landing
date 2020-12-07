@@ -1,17 +1,18 @@
 import React from "react";
 import styled from "styled-components";
-import PersonalizationUnDraw from "../../images/undraw_personalization_triu.png";
+import BusinessUnDraw from "../../images/undraw_businessman.svg";
 import EmailForm from "../../component/email-form/email-form";
+import PlanSection from "./PlanSection";
 
-const CustomPage = () => (
+const BusinessPage = () => (
   <Container>
-    <MockUp src={PersonalizationUnDraw} alt="PersonalizationUnDraw" />
-    <Title>CUSTOM</Title>
-    <Content>고객님의 니즈에 맞는 커스텀 모듈을 추가해드립니다.</Content>
-    <EmailForm
-      title="커스텀 신청"
-      subtitle="어떤 모듈을 만들고 싶은지 자세히 적어주세요"
-    />
+    <MockUp src={BusinessUnDraw} alt="BusinessUnDraw" />
+    <Title>BUSINESS</Title>
+    <Content>
+      무엇이든지 원하는 애플리케이션을 JOIN 팀이 직접 제작해 드려요
+    </Content>
+    <PlanSection />
+    <EmailForm title="BUSINESS CONTACT" subtitle="비지니스 연락" />
   </Container>
 );
 
@@ -23,13 +24,34 @@ const Title = styled.span`
 
 const Content = styled.span`
   margin-top: 10px;
-  font-size: calc(20px + 0.1vw);
+  margin-bottom: 300px;
+  font-size: calc(15px + 0.4vw);
   font-weight: 400;
 `;
 
 const MockUp = styled.img`
   width: calc(300px + 12vw);
   margin-top: calc(20px + 5vw);
+
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+  transform: scale(1);
+
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+
+  &:hover {
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    transform: scale(1.2);
+  }
 `;
 
 const Container = styled.div`
@@ -41,4 +63,4 @@ const Container = styled.div`
   justify-content: space-evenly;
 `;
 
-export default CustomPage;
+export default BusinessPage;

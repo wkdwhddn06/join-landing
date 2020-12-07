@@ -23,6 +23,7 @@ const Title = styled.span`
 
 const Content = styled.span`
   margin-top: 10px;
+  margin-bottom: 300px;
   font-size: calc(20px + 0.1vw);
   font-weight: 400;
 `;

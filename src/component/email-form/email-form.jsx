@@ -8,10 +8,10 @@ const EmailForm = ({ title, subtitle }) => {
   const [isSending, setIsSending] = useState();
 
   function postMail() {
-    var name = document.getElementsByName("name").values;
-    var email = document.getElementsByName("email").values;
-    var phone = document.getElementsByName("phone").values;
-    var message = document.getElementsByName("message").values;
+    var name = document.getElementsById("name").values;
+    var email = document.getElementsById("email").values;
+    var phone = document.getElementsById("phone").values;
+    var message = document.getElementsById("message").values;
 
     const formData = new FormData();
     formData.append("name", name);
@@ -19,7 +19,7 @@ const EmailForm = ({ title, subtitle }) => {
     formData.append("phone", phone);
     formData.append("message", message);
 
-    setIsSending('disabled');
+    setIsSending("disabled");
     setText("전송중...");
     axios
       .post(
@@ -47,7 +47,9 @@ const EmailForm = ({ title, subtitle }) => {
         <InputForm name="email" title="이메일" />
         <InputForm name="phone" title="휴대폰 번호" />
         <InputForm name="message" title="설명" long={true} />
-        <Button onClick={postMail} disabled={isSending}>{text}</Button>
+        <Button onClick={postMail} disabled={isSending}>
+          {text}
+        </Button>
       </GForm>
     </Container>
   );
@@ -76,8 +78,7 @@ const Container = styled.div`
   @media only screen and (max-width: 800px) {
     width: 85%;
   }
-  margin-top: 300px;
-  margin-bottom: 300px;
+  margin-bottom: 100px;
   display: flex;
   flex-direction: column;
 `;

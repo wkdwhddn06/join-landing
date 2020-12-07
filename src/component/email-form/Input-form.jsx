@@ -6,14 +6,14 @@ const InputForm = ({ title, long, name }) => {
     return (
       <>
         <Title>{title}</Title>
-        <InputArea type="text" name={name} />
+        <InputArea type="text" id={name} name={name} />
       </>
     );
   } else {
     return (
       <>
         <Title>{title}</Title>
-        <Input type="text" name={name} />
+        <Input type="text" id={name} name={name} />
       </>
     );
   }

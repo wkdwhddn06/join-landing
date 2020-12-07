@@ -2,12 +2,14 @@ import React from "react";
 import styled from "styled-components";
 import SupportUnDraw from "../../images/undraw_team_spirit.svg";
 import EmailForm from "../../component/email-form/email-form";
+import Question from "../../component/question/Question";
 
 const CustomPage = () => (
   <Container>
     <MockUp src={SupportUnDraw} alt="SupportUnDraw" />
     <Title>SUPPORT</Title>
     <Content>무엇을 도와드릴까요?</Content>
+    <Question/>
     <EmailForm
       title="고객지원 연락"
       subtitle="어떤 이야기든 환영입니다. 자주 묻는 질문에 있는 내용만 빼고요."
