@@ -1,13 +1,22 @@
 import React from "react";
 import styled from "styled-components";
 
-const InputForm = ({ title, long }) => {
-  return (
-    <>
-      <Title>{title}</Title>
-      <Input type="textarea" id="lname" name="lname" long={long}></Input>
-    </>
-  );
+const InputForm = ({ title, long, name }) => {
+  if (long) {
+    return (
+      <>
+        <Title>{title}</Title>
+        <InputArea type="text" name={name} />
+      </>
+    );
+  } else {
+    return (
+      <>
+        <Title>{title}</Title>
+        <Input type="text" name={name} />
+      </>
+    );
+  }
 };
 
 InputForm.defaultProps = {
@@ -21,8 +30,8 @@ const Title = styled.span`
   color: #707070;
 `;
 
-const Input = styled.textarea`
-  height: ${(props) => (props.long ? "300px" : "60px")};
+const Input = styled.input`
+  height: 60px;
   @media only screen and (min-width: 800px) {
     width: 60%;
   }
@@ -36,9 +45,30 @@ const Input = styled.textarea`
   padding-right: 16px;
   display: inline-block;
   vertical-align: middle;
-  padding-top: ${(props) => (props.long ? "12px" : "0px")};
-  vertical-align: ${(props) => (props.long ? "text-top" : "middle")};
+  padding-top: 0px;
+  vertical-align: "middle";
   outline: 0px;
+`;
+
+const InputArea = styled.textarea`
+  height: 300px;
+  @media only screen and (min-width: 800px) {
+    width: 60%;
+  }
+  margin-top: 20px;
+  border: 1px solid #b9b9b9;
+  border-radius: 16px;
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  padding-left: 16px;
+  padding-right: 16px;
+  display: inline-block;
+  vertical-align: middle;
+  padding-top: 12px;
+  vertical-align: text-top;
+  outline: 0px;
+  resize: none;
 `;
 
 export default InputForm;

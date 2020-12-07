@@ -6,6 +6,7 @@ import { BrowserRouter } from "react-router-dom";
 import Nav from "./component/navbar/Nav.jsx";
 import LandingPage from "./pages/landing/LandingPage";
 import CustomPage from "./pages/custom/CustomPage";
+import SupportPage from "./pages/support/SupportPage"
 
 const App = () => (
   <RouterContanier>
@@ -13,6 +14,7 @@ const App = () => (
       <Nav />
       <Route exact path="/" component={LandingPage} />
       <Route exact path="/custom" component={CustomPage} />
+      <Route exact path="/support" component={SupportPage} />
     </BrowserRouter>
   </RouterContanier>
 );
